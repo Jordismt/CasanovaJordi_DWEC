@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de Minas</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .game-container {
+            margin-top: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            gap: 5px;
+            margin-top: 20px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .cell.revealed {
+            background-color: #f0f0f0;
+            cursor: default;
+        }
+        .cell.bomb {
+            background-color: #ff4d4d;
+        }
+        .status {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Campo de Minas</h1>
+    
+    <div class="game-container">
+        <button onclick="iniciarJuego()">Iniciar Juego</button>
+        <button onclick="detenerJuego()">Detener Juego</button>
+        <div id="status" class="status"></div>
+        <div id="grid" class="grid"></div>
+    </div>
+    
+    <script src="ex7.js"></script>
+</body>
+</html>

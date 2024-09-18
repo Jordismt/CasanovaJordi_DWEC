@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici Matriu 3x5</title>
+    <style>
+        body{
+            background-color: rgb(147, 212, 255);
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        h3{
+            color: rgb(180, 11, 11);
+        }
+        button{
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 7px;
+            background-color: rgb(18, 107, 107);
+            color: white;
+        }
+        button:hover{
+            padding: 9px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercici: Matriu de 3 files i 5 columnes</h1>
+
+    <h3>IMPORTANT: Per a veure el resultat, pulsa la tecla F12 i a continuació l'apartat de consola.</h3>
+    <button onclick="mostrarMatriu()">Mostrar Matriu a la Consola</button>
+
+    <script>
+        function crearMatriu() {
+            let matriu = [];
+            for (let fila = 1; fila <= 3; fila++) {
+                let filaMatriu = [];
+                for (let col = 1; col <= 5; col++) {
+                    filaMatriu.push(`f${fila}c${col}`);
+                }
+                matriu.push(filaMatriu);
+            }
+            return matriu;
+        }
+
+        function mostrarMatriu() {
+            let matriu = crearMatriu();
+            // Empalmar dos forEach() per recórrer la matriu
+            matriu.forEach((fila, indexFila) => {
+                fila.forEach((celda, indexCol) => {
+                    console.log(`Fila ${indexFila + 1}, Columna ${indexCol + 1}: ${celda}`);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

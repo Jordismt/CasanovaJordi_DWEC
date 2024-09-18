@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Noms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #original, #filtered {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #original {
+            font-weight: bold;
+        }
+
+        #filtered {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Filtrar Noms amb 6 o Més Lletres</h1>
+        <button onclick="filtrarNoms()">Filtrar Noms</button>
+        <div id="original"></div>
+        <div id="filtered"></div>
+    </div>
+
+    <script>
+        function filtrarNoms() {
+            // Vector de noms
+            const noms = ["Jordi", "Maria", "Ana", "Xavier", "Laura", "Martí", "Marta", "Albert", "Clara", "Joaquim"];
+
+            // Mostrar l'array original
+            document.getElementById('original').textContent = `Noms originals: ${noms.join(', ')}`;
+
+            // Filtrar noms amb 6 o més lletres
+            const nomsFiltrats = noms.filter(nom => nom.length >= 6);
+
+            // Mostrar l'array filtrat
+            document.getElementById('filtered').textContent = `Noms amb 6 o més lletres: ${nomsFiltrats.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

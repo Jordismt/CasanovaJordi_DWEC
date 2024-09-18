@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Aleatori amb Canvis a les Caselles</title>
+    <style>
+        body{
+            background-color: rgb(147, 212, 255);
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        h3{
+            color: rgb(180, 11, 11);
+        }
+        button{
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 7px;
+            background-color: rgb(18, 107, 107);
+            color: white;
+        }
+        button:hover{
+            padding: 9px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Aleatori de 100 Números amb Caselles de la 25 a la 75 en 0</h1>
+    <h3>IMPORTANT: Per a veure el resultat, pulsa la tecla F12 i a continuació l'apartat de consola.</h3>
+
+    <button onclick="generarArray()">Generar Array</button>
+
+    <script>
+        function generarArray() {
+            let arrayNumeros = [];
+
+            // Generar 100 números aleatoris entre 0 i 9
+            for (let i = 0; i < 100; i++) {
+                arrayNumeros.push(Math.floor(Math.random() * 10)); // Números entre 0 i 9
+            }
+
+            // Canviar els valors entre les posicions 25 i 75 a 0
+            for (let i = 25; i <= 75; i++) {
+                arrayNumeros[i] = 0;
+            }
+
+            // Mostrar l'array per consola
+            console.log("Array amb caselles 25-75 a 0:", arrayNumeros);
+        }
+    </script>
+</body>
+</html>

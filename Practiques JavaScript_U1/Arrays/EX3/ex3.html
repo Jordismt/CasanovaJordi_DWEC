@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comptar Números Aleatoris</title>
+    <style>
+        body{
+            background-color: rgb(147, 212, 255);
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        h3{
+            color: rgb(180, 11, 11);
+        }
+        button{
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 7px;
+            background-color: rgb(18, 107, 107);
+            color: white;
+        }
+        button:hover{
+            padding: 9px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generació d'Array de 100 Números Aleatoris i comptar els Dígits</h1>
+    <h3>IMPORTANT: Per a veure el resultat, pulsa la tecla F12 i a continuació l'apartat de consola.</h3>
+    <button onclick="generarArrayIComptar()">Generar Array i Comptar</button>
+
+    <script>
+        function generarArrayIComptar() {
+            // Generar un array de 100 números aleatoris entre 0 i 9
+            let arrayNumeros = [];
+            for (let i = 0; i < 100; i++) {
+                let numeroAleatori = Math.floor(Math.random() * 10); // Genera números entre 0 i 9
+                arrayNumeros.push(numeroAleatori);
+            }
+
+            // Inicialitzar un objecte per comptar la freqüència de cada dígit
+            let comptadorDigits = {
+                0: 0, 1: 0, 2: 0, 3: 0, 4: 0,
+                5: 0, 6: 0, 7: 0, 8: 0, 9: 0
+            };
+
+            // Comptar la freqüència de cada dígit
+            arrayNumeros.forEach(numero => {
+                comptadorDigits[numero]++;
+            });
+
+            // Mostrar el resultat per consola
+            console.log("Array generat:", arrayNumeros);
+            console.log("Comptatge de dígits:");
+            for (let digit in comptadorDigits) {
+                console.log(`Dígit ${digit}: ${comptadorDigits[digit]} vegades`);
+            }
+        }
+    </script>
+</body>
+</html>

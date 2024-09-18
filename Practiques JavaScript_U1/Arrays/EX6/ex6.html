@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprovació de Noms d'Animals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Comprovació de Noms d'Animals</h1>
+        <button onclick="comprovarNom()">Comprovar Nom</button>
+    </div>
+
+    <script>
+        function comprovarNom() {
+            // Vector amb noms d'animals
+            const animals = ["gossa", "gato", "elefant", "lleó", "tigre", "ocell", "serp", "cavall", "ós", "monkey"];
+
+            // Demanar a l'usuari que introdueixi un nom
+            const nom = prompt("Introdueix un nom d'animal:");
+
+            // Comprovar si el nom existeix en l'array
+            if (animals.includes(nom.toLowerCase())) {
+                alert(`El nom "${nom}" existeix en el vector.`);
+            } else {
+                alert(`El nom "${nom}" NO existeix en el vector.`);
+            }
+        }
+    </script>
+</body>
+</html>

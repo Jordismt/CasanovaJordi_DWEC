@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generació de Números Aleatoris Sense Repetir</title>
+    <style>
+        body{
+            background-color: rgb(147, 212, 255);
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        h3{
+            color: rgb(180, 11, 11);
+        }
+        button{
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 7px;
+            background-color: rgb(18, 107, 107);
+            color: white;
+        }
+        button:hover{
+            padding: 9px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generació d'Array de 25 Números Aleatoris (0-100) Sense Repetir</h1>
+    <h3>IMPORTANT: Per a veure el resultat, pulsa la tecla F12 i a continuació l'apartat de consola.</h3>
+    <button onclick="generarArray()">Generar Array</button>
+
+    <script>
+        function generarArray() {
+            let arrayNumeros = new Set(); // Fem ús d'un Set per evitar números repetits
+
+            // Generar 25 números aleatoris diferents entre 0 i 100
+            while (arrayNumeros.size < 25) {
+                let numeroAleatori = Math.floor(Math.random() * 101); // Genera números entre 0 i 100
+                arrayNumeros.add(numeroAleatori); // El Set s'encarrega d'evitar duplicats
+            }
+
+            // Convertir el Set a un array per mostrar-ho a la consola
+            let arrayFinal = Array.from(arrayNumeros);
+
+            // Mostrar el resultat per consola
+            console.log("Array generat sense números repetits:", arrayFinal);
+        }
+    </script>
+</body>
+</html>

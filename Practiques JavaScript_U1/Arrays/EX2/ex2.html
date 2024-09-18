@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici Matriu 3x5 amb push()</title>
+    <style>
+        body{
+            background-color: rgb(147, 212, 255);
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        h3{
+            color: rgb(180, 11, 11);
+        }
+        button{
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 7px;
+            background-color: rgb(18, 107, 107);
+            color: white;
+        }
+        button:hover{
+            padding: 9px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercici: Matriu de 3 files i 5 columnes amb push()</h1>
+
+    <h3>IMPORTANT: Per a veure el resultat, pulsa la tecla F12 i a continuació l'apartat de consola.</h3>
+    
+    <button onclick="mostrarMatriu()">Mostrar Matriu a la Consola</button>
+
+    <script>
+        function crearMatriu() {
+            let matriu = [];
+            
+            // Afegir cada fila una a una fent ús de push()
+            let fila1 = [];
+            for (let col = 1; col <= 5; col++) {
+                fila1.push(`f1c${col}`);
+            }
+            matriu.push(fila1); // Afegim la fila 1
+
+            let fila2 = [];
+            for (let col = 1; col <= 5; col++) {
+                fila2.push(`f2c${col}`);
+            }
+            matriu.push(fila2); // Afegim la fila 2
+
+            let fila3 = [];
+            for (let col = 1; col <= 5; col++) {
+                fila3.push(`f3c${col}`);
+            }
+            matriu.push(fila3); // Afegim la fila 3
+
+            return matriu;
+        }
+
+        function mostrarMatriu() {
+            let matriu = crearMatriu();
+            
+            // Recorrem la matriu amb dos forEach()
+            matriu.forEach((fila, indexFila) => {
+                fila.forEach((celda, indexCol) => {
+                    console.log(`Fila ${indexFila + 1}, Columna ${indexCol + 1}: ${celda}`);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

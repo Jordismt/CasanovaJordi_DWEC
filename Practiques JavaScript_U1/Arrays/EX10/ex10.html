@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Productes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #original, #filtered {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #original {
+            font-weight: bold;
+        }
+
+        #filtered {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Filtrar Productes amb Rebaixa</h1>
+        <button onclick="filtrarProductes()">Filtrar Productes</button>
+        <div id="original"></div>
+        <div id="filtered"></div>
+    </div>
+
+    <script>
+        function filtrarProductes() {
+            // Matriu de productes amb el seu preu
+            const productes = [
+                ["Producte A", 120],
+                ["Producte B", 60],
+                ["Producte C", 85],
+                ["Producte D", 90],
+                ["Producte E", 40],
+                ["Producte F", 78]
+            ];
+
+            // Mostrar l'array original
+            document.getElementById('original').textContent = `Productes originals: ${productes.map(p => `${p[0]}: ${p[1]}€`).join(', ')}`;
+
+            // Filtrar productes amb preu > 75€ i aplicar rebaixa del 10%
+            const productesFiltrats = productes
+                .filter(([nom, preu]) => preu > 75)
+                .map(([nom, preu]) => [nom, preu * 0.9]);
+
+            // Mostrar l'array filtrat
+            document.getElementById('filtered').textContent = `Productes amb rebaixa: ${productesFiltrats.map(p => `${p[0]}: ${p[1].toFixed(2)}€`).join(', ')}`;
+        }
+    </script>
+</body>
+</html>

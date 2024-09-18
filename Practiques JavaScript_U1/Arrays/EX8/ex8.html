@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Noms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ordenar Noms Alfabèticament</h1>
+        <button onclick="ordenarNoms()">Ordenar Noms</button>
+        <p id="per_ordenar"></p>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function ordenarNoms() {
+            // Vector de noms
+            const noms = ["Jordi", "Anna", "Marta", "Xavi", "Luis", "Maria", "Marc", "Laura"];
+
+
+
+
+            //Noms desordenats
+            document.getElementById('per_ordenar').textContent=`Noms desordenats: ${noms}`
+            
+            // Ordenar els noms alfabèticament
+            noms.sort();
+            // Mostrar el resultat
+            document.getElementById('result').textContent = `Noms ordenats: ${noms.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

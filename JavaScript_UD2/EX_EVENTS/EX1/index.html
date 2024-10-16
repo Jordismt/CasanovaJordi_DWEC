@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanides Saludables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Fondo suave */
+            color: #343a40; /* Color de texto más oscuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Centra el contenido verticalmente */
+            margin: 0; /* Elimina márgenes por defecto */
+        }
+
+        #wrapper {
+            background: white; /* Fondo blanco para el contenedor principal */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            padding: 20px;
+            width: 90%; /* Ancho flexible */
+            max-width: 600px; /* Ancho máximo */
+        }
+
+        #header {
+            text-align: center; /* Centra el encabezado */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        h1 {
+            font-size: 24px; /* Tamaño de fuente más grande */
+            color: #007bff; /* Color azul para el título */
+        }
+
+        #content {
+            border: 1px solid #dee2e6; /* Borde suave */
+            border-radius: 8px; /* Bordes redondeados */
+            padding: 10px;
+            background-color: #f1f1f1; /* Fondo gris claro */
+            transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        }
+
+        #content:hover {
+            background-color: #e9ecef; /* Color de fondo al pasar el ratón */
+        }
+
+        .image-item {
+            width: 60px; /* Ancho de las imágenes */
+            height: 60px; /* Alto de las imágenes */
+            margin: 5px;
+            border-radius: 5px; /* Bordes redondeados para las imágenes */
+            transition: transform 0.2s; /* Transición suave para el efecto hover */
+        }
+
+        .image-item:hover {
+            transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+        }
+
+        .buttons {
+            display: none;
+            margin-top: 20px; /* Espacio superior más grande */
+        }
+
+        .btn {
+            background-color: #007bff; /* Color de fondo azul */
+            color: white; /* Texto blanco */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px 15px; /* Relleno más grande */
+            cursor: pointer; /* Cambia el cursor a mano */
+            transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="header">
+        <h1>Amanides Saludables</h1>
+    </div>
+    <div id="content">
+        <button id="startBtn" class="btn">Començar</button>
+        <div class="buttons">
+            <button id="addGreens" class="btn">Afegir verdolaga</button>
+            <button id="addProteins" class="btn">Afegir proteines</button>
+            <button id="addDressing" class="btn">Afegir alinyament</button>
+            <button id="clearAll" class="btn">Netejar Amanida</button>
+        </div>
+        <div id="saladContainer"></div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border 0.3s;
+        }
+        input[type="text"].error,
+        input[type="email"].error,
+        input[type="password"].error,
+        input[type="tel"].error,
+        select.error {
+            border-color: red; /* Rojo para errores */
+        }
+        input[type="text"].valid,
+        input[type="email"].valid,
+        input[type="password"].valid,
+        input[type="tel"].valid,
+        select.valid {
+            border-color: green; /* Verde para campos válidos */
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:disabled {
+            background-color: #cccccc; /* Gris claro cuando está deshabilitado */
+            cursor: not-allowed;
+        }
+        input[type="submit"]:hover:not(:disabled) {
+            background-color: #4cae4c; /* Verde más oscuro al pasar el ratón */
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Ejemplo</h1>
+
+    <form id="myForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <div id="nombreError" class="error-message"></div>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+        <div id="correoError" class="error-message"></div>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        <div id="contrasenaError" class="error-message"></div>
+
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        <div id="fechaError" class="error-message"></div>
+
+        <label for="numero">Número de teléfono:</label>
+        <input type="tel" id="numero" name="numero" required>
+        <div id="numeroError" class="error-message"></div>
+
+        <label for="checkbox">Acepto los términos y condiciones:</label>
+        <input type="checkbox" id="checkbox" name="aceptar_terminos" required>
+        <div id="checkboxError" class="error-message"></div>
+
+        <label for="radio1">Opción 1:</label>
+        <input type="radio" id="radio1" name="opcion" value="opcion1" required>
+        
+        <label for="radio2">Opción 2:</label>
+        <input type="radio" id="radio2" name="opcion" value="opcion2" required>
+        <div id="radioError" class="error-message"></div>
+
+        <label for="seleccion">Seleccione una opción:</label>
+        <select id="seleccion" name="seleccion" required>
+            <option value="">Seleccione...</option>
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+        </select>
+        <div id="seleccionError" class="error-message"></div>
+
+        <label for="area_texto">Comentarios:</label>
+        <textarea id="area_texto" name="comentarios" rows="4" cols="50" required></textarea>
+        <div id="comentariosError" class="error-message"></div>
+
+        <input type="submit" value="Enviar" id="submitButton" disabled>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>

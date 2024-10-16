@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penya Ciclista Dolor de Cul</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Penya Ciclista Dolor de Cul</h1>
+        <div id="countdown"></div>
+    </header>
+
+    <main>
+        <section>
+            <label for="select-ports">Selecciona un puerto:</label>
+            <select id="select-ports">
+                <option value="todos">Todos</option>
+                <option value="pirineus">Pirineus</option>
+                <option value="pics">Pics d'Europa</option>
+            </select>
+            <button id="reset">Resetear</button>
+            <button id="contact">Contacto</button>
+        </section>
+
+        <div id="contenedor"></div>
+        <div id="imagenes-aleatorias" class="imagenes-aleatorias"></div>
+
+        <div class="ciclistas">
+            <div class="destacado_verd" id="tadej-pogacar" style="display:none;">Tadej Pogacar</div>
+            <div class="destacado_blau" id="jonas-vingegaard" style="display:none;">Jonas Vingegaard</div>
+            <img src="https://media.gettyimages.com/id/2162798377/es/foto/col-de-la-couillole-france-tadej-pogacar-of-slovenia-and-uae-team-emirates-yellow-leader.jpg?s=612x612&w=gi&k=20&c=76_3Z2g0i_bSVUEqbJGtrs8CxKA-gvcp8Hn7U5SR6vw=" alt="Tadej Pogacar" class="ciclista" id="pogacar">
+            <img src="https://media.gettyimages.com/id/1480837903/es/foto/eibar-spain-jonas-vingegaard-of-denmark-and-team-jumbo-visma-yellow-leader-jersey-celebrates.jpg?s=612x612&w=gi&k=20&c=TA0CtC8rERdtFJ2MPB1nHAtX-94MxqoeAQjoXSf3exU=" alt="Jonas Vingegaard" class="ciclista" id="vingegaard">
+        </div>
+
+        <div id="formulario-contacto" style="display:none;">
+            <h2>Formulario de Inscripción</h2>
+            <form id="contact-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+        
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" required>
+        
+                <label>Género:</label>
+                <input type="radio" name="genero" value="masculino" required> Masculino
+                <input type="radio" name="genero" value="femenino" required> Femenino
+        
+                <label>Tipo de bicicleta:</label>
+                <input type="checkbox" id="carretera"> Carretera
+                <input type="checkbox" id="gravel"> Gravel
+                <input type="checkbox" id="rigida"> Rígida
+                <input type="checkbox" id="doble"> Doble
+                <input type="checkbox" id="electrica"> Eléctrica
+        
+                <input type="submit" id="submit" value="Enviar" disabled>
+            </form>
+            <div id="form-errors" class="error-message"></div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Penya Ciclista Dolor de Cul</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

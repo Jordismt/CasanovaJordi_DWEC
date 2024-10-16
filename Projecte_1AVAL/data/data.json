@@ -1,0 +1,43 @@
+{
+    "pirineus": [
+      {
+        "nombre": "Tourmalet",
+        "altitud": 2115,
+        "longitud": 17,
+        "pendiente": 7.3,
+        "desnivel": 1268,
+        "coeficienteAPM": 315,
+        "imagen": "../images/Tourmalet2.gif"
+      },
+      {
+        "nombre": "Coll de la Gallina",
+        "altitud": 1910,
+        "longitud": 11.76,
+        "pendiente": 8.36,
+        "desnivel": 982,
+        "coeficienteAPM": 263,
+        "imagen": "../images/LaGallina.gif"
+      }
+    ],
+    "pics_de_europa": [
+      {
+        "nombre": "Lagos de Covadonga",
+        "altitud": 1124,
+        "longitud": 13.9,
+        "pendiente": 6.92,
+        "desnivel": 962,
+        "coeficienteAPM": 268,
+        "imagen": "../images/Lagos.gif"
+      },
+      {
+        "nombre": "L’Angliru",
+        "altitud": 1572,
+        "longitud": 12.4,
+        "pendiente": 10.21,
+        "desnivel": 1266,
+        "coeficienteAPM": 514,
+        "imagen": "../images/alto_ANGLIRU_altimetria.jpg"
+      }
+    ]
+  }
+  

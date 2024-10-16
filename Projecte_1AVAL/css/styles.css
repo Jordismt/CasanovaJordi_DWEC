@@ -1,0 +1,182 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo del encabezado */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del contador */
+#countdown {
+    font-size: 2em;
+    margin: 20px 0;
+    animation: pulse 1.5s infinite; /* Efecto de pulso */
+}
+
+/* Efecto de pulso */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Estilo del main */
+main {
+    margin: 20px 0;
+}
+
+/* Estilo de la sección principal */
+section {
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor de puertos */
+#contenedor {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+/* Sombra y transformación al pasar el ratón */
+#contenedor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los ciclistas */
+.ciclistas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Estilo de las imágenes de ciclistas */
+.ciclista {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Agregando sombras */
+}
+
+.ciclista:hover {
+    transform: scale(1.1); /* Aumenta ligeramente al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para ciclistas destacados */
+.destacado_verd {
+    border: 5px solid green;
+}
+
+.destacado_blau {
+    border: 5px solid blue;
+}
+
+/* Estilo para las imágenes aleatorias */
+.imagenes-aleatorias {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo de los mensajes de error */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    animation: shake 0.3s; /* Animación de sacudida */
+}
+
+/* Animación de sacudida */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Estilo del formulario de contacto */
+#formulario-contacto {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Estilo de los elementos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="radio"]:focus,
+form input[type="checkbox"]:focus {
+    border-color: #4a90e2; /* Color de borde al enfocar */
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transición al cambiar el color y la transformación */
+}
+
+form input[type="submit"]:hover {
+    background-color: #357ab8; /* Cambia el color al pasar el ratón */
+    transform: translateY(-2px); /* Levanta el botón al pasar el ratón */
+}
+
+form input[type="submit"]:active {
+    transform: translateY(0); /* Vuelve a su posición normal */
+}

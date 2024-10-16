@@ -22,3 +22,8 @@ Si desitges clonar aquest repositori al teu ordinador local, segueix aquests pas
 1.- No es veuen les imatges generades dinamicament desde el data.json en la página del repositori.
 
  -Com sabem, GitHub pages, oferix allotjament a págines estátiques, per tant les imatges generades dinámicament desde el JSON no seran visibles, per a veure la Página funcional 100%, clona el repositori amb la comanda anterior !!
+
+ 2.-Posibles problemes en CORS al executar directament index.html sense utilitat d'un servidor web
+
+  -Al executar l'index.html directament, pot hi haure un problema de CORS en el navegador i no visualitzar be la página, ja que per a mostrar els datos del JSON, s'utilitza fetch per a fer la solicitud i mostrar els datos
+  Per a evitar aquest error, pots executar l'index.html en un servidor web com Apache o executarlo amb la extencio de VS Code 'Live Server' per a que la página web es vega perfecta.

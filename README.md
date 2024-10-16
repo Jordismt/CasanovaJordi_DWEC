@@ -16,3 +16,9 @@ Si desitges clonar aquest repositori al teu ordinador local, segueix aquests pas
    git clone https://github.com/Jordismt/CasanovaJordi_DWEC.git
 
 3. Inicia l'archiu index.html per a millor navegació !!
+
+## ERRORS O POSSIBLES DUBTES (Projecte 1AVAL)
+
+1.- No es veuen les imatges generades dinamicament desde el data.json en la página del repositori.
+
+ -Com sabem, GitHub pages, oferix allotjament a págines estátiques, per tant les imatges generades dinámicament desde el JSON no seran visibles, per a veure la Página funcional 100%, clona el repositori amb la comanda anterior !!

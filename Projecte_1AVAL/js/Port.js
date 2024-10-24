@@ -1,7 +1,8 @@
 export class Port {
-    constructor(data, container) {
+    constructor(data, container, ports) {
         this.data = data;
         this.container = container;
+        this.ports = ports;  // Guardamos la lista de puertos para volver a ella
     }
 
     mostrarPuerto() {
@@ -15,20 +16,27 @@ export class Port {
                 <li>Coeficiente APM: ${this.data.coeficienteAPM}</li>
             </ul>
             <img src="${this.data.imagen}" alt="${this.data.nombre}" style="width:250px">
+            <br><br><br>
+            <button id="volver-lista" style="padding:5px 10px; border: 1px solid black; border-radius:25px; background-color:#4a90e2;">Volver a la lista</button>  <!-- Botón Volver -->
         `;
-    }
 
-    static mostrarLista(ports, container) {
-        container.innerHTML = '';
-        ports.forEach(portData => {
-            const port = new Port(portData, container);
-            const portElement = document.createElement('div');
-            portElement.innerHTML = `<p>${portData.nombre}</p>`;
-            portElement.addEventListener('click', () => port.mostrarPuerto());
-            container.appendChild(portElement);
+        // Agregar funcionalidad al botón "Volver"
+        document.getElementById('volver-lista').addEventListener('click', () => {
+            Port.mostrarLista(this.ports, this.container);  // Volver a la lista de puertos
         });
     }
 
+    static mostrarLista(ports, container) {
+        container.innerHTML = ''; // Limpiar contenedor
+        ports.forEach(portData => {
+            const port = new Port(portData, container, ports);  // Pasamos la lista completa de puertos
+            const portElement = document.createElement('div');
+            portElement.innerHTML = `<p>${portData.nombre}</p>`;
+            portElement.style.cursor = 'pointer';  // Añadimos el estilo de cursor para indicar que es clicable
+            portElement.addEventListener('click', () => port.mostrarPuerto());  // Al hacer clic, mostramos el detalle del puerto
+            container.appendChild(portElement);
+        });
+    }
 }
 
 export async function getPortsData() {

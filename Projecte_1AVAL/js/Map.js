@@ -25,12 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }));
 
     // Añadir eventos a los botones para centrar el mapa en los puertos
-    document.getElementById('showUserLocation').addEventListener('click', () => {
-        navigator.geolocation.getCurrentPosition(pos => {
-            const userCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-            centerMap(map, userCoords);
-        });
-    });
+
 
     document.getElementById('showTourmalet').addEventListener('click', () => {
         centerMap(map, { lat: portsData.pirineus[0].latitud, lon: portsData.pirineus[0].longitud });

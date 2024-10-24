@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             contactButton.addEventListener('click', () => {
-                document.getElementById('formulario-contacto').style.display = 'block'; // Cambiado de contactForm a formulario-contacto
+                document.getElementById('formulario-contacto').style.display = 'block'; 
                 contactButton.style.display = 'none';
             });
             

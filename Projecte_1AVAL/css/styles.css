@@ -58,7 +58,7 @@ section {
 
 /* Estilo del contenedor de puertos */
 #contenedor {
-    background: white;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -184,10 +184,24 @@ form input[type="submit"]:active {
 
 /*Estilo botones mapa*/
 
-#showUserLocation, #showTourmalet, #showGallina, #showCovadonga, #showAngliru{
+/* Estilo contenedor de los botones */
+.container-map-button {
+    margin: 20px;
+    text-align: center;
+}
+
+/* Estilo para los botones */
+#showTourmalet, #showGallina, #showCovadonga, #showAngliru {
     margin: 5px;
-    border: 1px solid rgb(42, 42, 160);
+    border: 2px solid rgb(42, 42, 160);
     border-radius: 25px;
     padding: 10px;
     background-color: #4a90e2;
+    transition: padding 0.3s ease; /* Transición suave en el botón */
+}
+
+/* Efecto hover para agrandar el padding de los botones */
+#showTourmalet:hover, #showGallina:hover, #showCovadonga:hover, #showAngliru:hover {
+    border: 0.5px solid rgb(42, 42, 160);
+    padding: 15px; 
 }

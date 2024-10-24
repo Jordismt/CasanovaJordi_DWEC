@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penya Ciclista Dolor de Cul</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
     <header>
@@ -25,9 +27,9 @@
         </section>
 
         <div id="contenedor"></div>
-
+ 
         <div id="imagenes-aleatorias" class="imagenes-aleatorias"></div>
-
+    
         <div class="ciclistas">
             <div class="destacado_verd" id="tadej-pogacar" style="display:none;">Tadej Pogacar</div>
             <div class="destacado_blau" id="jonas-vingegaard" style="display:none;">Jonas Vingegaard</div>
@@ -61,11 +63,21 @@
         </div>
         
     </main>
-
+    <div id='map' style='width: 100%; height: 400px;'></div>
+        <!-- Botones para los puertos -->
+    <div>
+        <button id="showUserLocation">Mostrar mi ubicación</button>
+        <button id="showTourmalet">Mostrar Tourmalet</button>
+        <button id="showGallina">Mostrar Coll de la Gallina</button>
+        <button id="showCovadonga">Mostrar Lagos de Covadonga</button>
+        <button id="showAngliru">Mostrar L'Angliru</button>
+    </div>
+    <br><br>
     <footer>
         <p>&copy; 2024 Penya Ciclista Dolor de Cul</p>
     </footer>
 
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/Map.js"></script>
 </body>
 </html>

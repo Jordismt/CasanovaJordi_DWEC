@@ -1,43 +1,50 @@
 {
-    "pirineus": [
+  "pirineus": [
       {
-        "nombre": "Tourmalet",
-        "altitud": 2115,
-        "longitud": 17,
-        "pendiente": 7.3,
-        "desnivel": 1268,
-        "coeficienteAPM": 315,
-        "imagen": "./images/Tourmalet2.gif"
+          "nombre": "Tourmalet",
+          "latitud": 42.9064,
+          "longitud": 0.1989,
+          "altitud": 2115,
+          "longitud_puerto": 17,
+          "pendiente": 7.3,
+          "desnivel": 1268,
+          "coeficienteAPM": 315,
+          "imagen": "./images/Tourmalet2.gif"
       },
       {
-        "nombre": "Coll de la Gallina",
-        "altitud": 1910,
-        "longitud": 11.76,
-        "pendiente": 8.36,
-        "desnivel": 982,
-        "coeficienteAPM": 263,
-        "imagen": "./images/LaGallina.gif"
+          "nombre": "Coll de la Gallina",
+          "latitud": 42.4766,
+          "longitud": 1.4915,
+          "altitud": 1910,
+          "longitud_puerto": 11.76,
+          "pendiente": 8.36,
+          "desnivel": 982,
+          "coeficienteAPM": 263,
+          "imagen": "./images/LaGallina.gif"
       }
-    ],
-    "pics_de_europa": [
+  ],
+  "pics_de_europa": [
       {
-        "nombre": "Lagos de Covadonga",
-        "altitud": 1124,
-        "longitud": 13.9,
-        "pendiente": 6.92,
-        "desnivel": 962,
-        "coeficienteAPM": 268,
-        "imagen": "./images/Lagos.gif"
+          "nombre": "Lagos de Covadonga",
+          "latitud": 43.2712,
+          "longitud": -4.9864,
+          "altitud": 1124,
+          "longitud_puerto": 13.9,
+          "pendiente": 6.92,
+          "desnivel": 962,
+          "coeficienteAPM": 268,
+          "imagen": "./images/Lagos.gif"
       },
       {
-        "nombre": "L’Angliru",
-        "altitud": 1572,
-        "longitud": 12.4,
-        "pendiente": 10.21,
-        "desnivel": 1266,
-        "coeficienteAPM": 514,
-        "imagen": "./images/alto_ANGLIRU_altimetria.jpg"
+          "nombre": "L’Angliru",
+          "latitud": 43.2285,
+          "longitud": -5.9010,
+          "altitud": 1572,
+          "longitud_puerto": 12.4,
+          "pendiente": 10.21,
+          "desnivel": 1266,
+          "coeficienteAPM": 514,
+          "imagen": "./images/alto_ANGLIRU_altimetria.jpg"
       }
-    ]
-  }
-  
+  ]
+}

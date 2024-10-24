@@ -28,4 +28,16 @@ export class Port {
             container.appendChild(portElement);
         });
     }
+
+}
+
+export async function getPortsData() {
+    try {
+        const response = await fetch('./data/data.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error al cargar el archivo JSON:", error);
+        return {};
+    }
 }

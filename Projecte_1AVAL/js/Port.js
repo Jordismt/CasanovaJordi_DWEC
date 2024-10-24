@@ -14,7 +14,7 @@ export class Port {
                 <li>Desnivel: ${this.data.desnivel} m</li>
                 <li>Coeficiente APM: ${this.data.coeficienteAPM}</li>
             </ul>
-            <img src="${this.data.imagen}" alt="${this.data.nombre}">
+            <img src="${this.data.imagen}" alt="${this.data.nombre}" style="width:250px">
         `;
     }
 

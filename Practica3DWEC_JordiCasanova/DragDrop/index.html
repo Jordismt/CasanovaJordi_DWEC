@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici Drag and Drop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        #dragArea {
+            width: 400px;
+            height: 400px;
+            border: 2px dashed #0078A8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            color: #0078A8;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #dragImage {
+            width: 100px;
+            cursor: pointer;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exercici Drag and Drop</h1>
+    
+    <!-- Àrea on es podrà deixar caure la imatge -->
+    <div id="dragArea">
+        <p>Arrossega la imatge aquí!</p>
+    </div>
+    
+    <!-- Imatge que es pot arrossegar -->
+    <img id="dragImage" src="https://via.placeholder.com/100" alt="Imatge de mostra" draggable="true">
+
+    <script>
+        // Seleccionar els elements
+        const dragImage = document.getElementById('dragImage');
+        const dragArea = document.getElementById('dragArea');
+
+        // Afegir esdeveniment per mostrar l'efecte de "arrossegar"
+        dragImage.addEventListener('dragstart', (event) => {
+            // Establir el tipus de dada per a transferir (ID de la imatge)
+            event.dataTransfer.setData('text', event.target.id);
+        });
+
+        // Permetre el drop dins l'àrea
+        dragArea.addEventListener('dragover', (event) => {
+            event.preventDefault(); // Impedir el comportament per defecte
+        });
+
+        // Gestionar el drop
+        dragArea.addEventListener('drop', (event) => {
+            event.preventDefault(); // Impedir el comportament per defecte
+
+            // Recuperar la ID de la imatge arrossegada
+            const data = event.dataTransfer.getData('text');
+            const draggedElement = document.getElementById(data);
+
+            if (draggedElement) {
+                // Netejar el contingut de l'àrea de destinació
+                dragArea.innerHTML = '';
+
+                // Afegir la imatge a l'àrea de destinació
+                dragArea.appendChild(draggedElement);
+                dragArea.style.textAlign = 'center'; // Centrar la imatge a l'àrea
+                dragArea.innerHTML += '<p>Imatge afegida amb èxit!</p>';
+            }
+        });
+    </script>
+
+</body>
+</html>
